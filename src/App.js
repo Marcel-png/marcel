@@ -44,7 +44,7 @@ function Top(){
       <input type="text" placeholder="Search" className="border border-gray-300 px-4 py-2 rounded-full focus:outline-none"/>
       <button className="bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-blue-600 ml-4">Register</button>
        </div>
-      <img src={Imagedessus} className="w-1/3 ml-20 object-cover" alt=""></img>
+       <img src={Imagedessus} className="hidden lg:block w-1/3 ml-20 object-cover" alt=""> </img>
     </div>
   );
 };
