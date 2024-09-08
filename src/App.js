@@ -32,7 +32,7 @@ function Header() {
           <a href="#" className="text-gray-600 hover:text-gray-900">Pricing</a>
           <a href="#" className="text-gray-600 hover:text-gray-900 pr-4">Demo</a>
         </nav>
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden mr-20 md:flex items-center space-x-4">
           <input type="text"  placeholder="Search" className="border border-gray-300 px-4 py-2 rounded-full focus:outline-none"/>
           <button className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Register</button>
         </div>
