@@ -55,7 +55,7 @@ function Header() {
 function Top(){
   return(
     <div className="flex space-x-50 mt-20" >
-      <div className="md:w-1/2 w-full ml-20 text-center md:text-left px-4 md:px-0">
+      <div className="md:w-1/2 w-full ml-20 text-center md:text-left px-4 sm:text-center">
         <span className="text-sm block">Hey, Everyone👋</span>
         <h1 className="font-bold text-4xl md:text-6xl leading-tight">
           Newsify is the email newsletter that works completely automated
@@ -91,18 +91,21 @@ function Bottom(){
 function Middle() {
   return (
     <div className="mt-20">
-      <div className="bg-blue-500 flex justify-between items-center space-x-4 w-full">
-        <img src={stripe} alt="Stripe" className="w-1/10 p-2" />
-        <img src={google} alt="Google" className="w-1/10 p-2" />
-        <img src={samsung} alt="Samsung" className="w-1/10 p-2" />
-        <img src={visa} alt="Visa" className="w-1/10 p-2" />
-        <img src={spotify} alt="Spotify" className="w-1/10 p-2" />
-        <img src={linkdin} alt="LinkedIn" className="w-1/10 p-2" />
-        <img src={zoom} alt="Zoom" className="w-1/10 p-2" />
-      </div>
+      <div className="bg-blue-600 p-8">
+        <div className="flex justify-center items-center space-x-4 lg:space-x-12">
+          <img src={stripe} alt="Stripe" className="w-[10vw] max-w-[100px] min-w-[40px]" />
+          <img src={google} alt="Google" className="w-[10vw] max-w-[100px] min-w-[40px]" />
+          <img src={samsung} alt="Samsung" className="w-[10vw] max-w-[100px] min-w-[40px]" />
+          <img src={visa} alt="Visa" className="w-[10vw] max-w-[100px] min-w-[40px]" />
+          <img src={spotify} alt="Spotify" className="w-[10vw] max-w-[100px] min-w-[40px]" />
+          <img src={linkdin} alt="LinkedIn" className="w-[10vw] max-w-[100px] min-w-[40px]" />
+          <img src={zoom} alt="Zoom" className="w-[10vw] max-w-[100px] min-w-[40px]" />
+        </div>
+      </div>  
     </div>
   );
-};
+}
+
 export default function App() {
   return (
   <div>
