@@ -12,41 +12,43 @@ import { useState } from 'react';
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <header className="w-full">
+    <header className="w-full bg-white">
       <div className="bg-green-200 py-2 flex justify-center items-center">
         <span className="bg-blue-600 text-white text-sm px-2 py-1 rounded-full mr-2">New</span>
         <span className="text-gray-700 text-sm text-center">
           Using Teamly is a manifesto in itself. It is simply the best choice for your email marketing.
         </span>
       </div>
-      <div className="flex justify-between items-center py-4 px-4 md:px-9 bg-white">
-        <div className="text-blue-500 text-xl font-bold px-32">Newsify</div>
-        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden focus:outline-none text-gray-700">
+      <div className="grid grid-cols-12 items-center py-4 px-4 max-w-screen-lg mx-auto">
+        <div className="col-span-6 md:col-span-8 text-blue-500 text-xl font-bold">
+          Newsify
+        </div>
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="col-span-6 lg:hidden focus:outline-none text-gray-700 justify-self-end">
           <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}/>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
           </svg>
         </button>
-        <nav className="hidden md:flex ml-auto space-x-8">
+        <nav className="hidden md:col-span-4 lg:flex justify-end space-x-8">
           <a href="#" className="text-gray-600 hover:text-gray-900">Home</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">About Us</a>
+          <a href="#" className="text-gray-600 hover:text-gray-900 mr-8">About_Us</a>
           <a href="#" className="text-gray-600 hover:text-gray-900">Pricing</a>
           <a href="#" className="text-gray-600 hover:text-gray-900 pr-4">Demo</a>
-        </nav>
-        <div className="hidden mr-20 md:flex items-center space-x-4">
-          <input type="text"  placeholder="Search" className="border border-gray-300 px-4 py-2 rounded-full focus:outline-none"/>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Register</button>
+          <div className="flex flex-col sm:flex-row sm:space-x-4">
+          <input type="text" placeholder="Search" className="border border-gray-300 px-4 py-2 rounded-full mb-4 sm:mb-0"/>
+          <button className="bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-blue-600">Register</button>
         </div>
+        </nav>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden w-full px-4 mt-4 space-y-4 text-center">
+        <div className="lg:hidden lg:ml-auto w-full px-4 mt-4 space-y-4 text-center">
           <a href="#" className="block text-gray-600 hover:text-gray-900">Home</a>
           <a href="#" className="block text-gray-600 hover:text-gray-900">About Us</a>
           <a href="#" className="block text-gray-600 hover:text-gray-900">Pricing</a>
           <a href="#" className="block text-gray-600 hover:text-gray-900">Demo</a>
-          <div className="flex flex-col items-center space-y-4">
-            <input type="text" placeholder="Search" className="border border-gray-300 px-4 py-2 rounded-full w-full focus:outline-none"/>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 w-full">Register</button>
-          </div>
+          <div className="flex flex-col sm:flex-row sm:space-x-4">
+          <input type="text" placeholder="Search" className="border border-gray-300 px-4 py-2 rounded-full mb-4 sm:mb-0"/>
+          <button className="bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-blue-600">Register</button>
+        </div>
         </div>
       )}
     </header>
@@ -54,8 +56,8 @@ function Header() {
 };
 function Top() {
   return (
-    <div className="flex flex-col md:flex-row mt-20 items-center md:items-start justify-between max-w-screen-lg mx-auto px-4">
-      <div className="md:w-1/2 w-full text-center md:text-left">
+    <div className="grid grid-cols-12 mt-32 max-w-screen-lg mx-auto px-4">
+      <div className="col-span-12 md:col-span-8   text-center md:text-left">
         <span className="text-sm block">Hey, Everyone👋</span>
         <h1 className="font-bold text-4xl md:text-6xl leading-tight mt-4">
           Newsify is the email newsletter that works completely automated
@@ -68,7 +70,9 @@ function Top() {
           <button className="bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-blue-600">Register</button>
         </div>
       </div>
-      <img src={Imagedessus} className="w-full md:w-1/3 mx-auto md:mx-4 hidden md:block object-cover" alt=""/>
+      <div className="col-span-12 md:col-span-4 flex justify-center md:justify-end mt-8 md:mt-0">
+        <img src={Imagedessus} className="w-full object-cover lg:block hidden" alt=" "/>
+      </div>
     </div>
   );
 };
